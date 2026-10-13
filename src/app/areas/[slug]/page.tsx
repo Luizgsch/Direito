@@ -10,6 +10,8 @@ import { TopicArticle } from "@/components/topic-article";
 import { TopicsNavigation } from "@/components/topics-navigation";
 import { ProfileContext } from "@/components/profile-context";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [...practiceAreas, ...practiceTopics].map((area) => ({
     slug: area.slug,

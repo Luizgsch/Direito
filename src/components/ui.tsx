@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/config/site";
 import type { ReactNode } from "react";
+import { assetPath } from "@/lib/paths";
 
 export function Arrow() {
   return (
@@ -56,7 +57,7 @@ export function PhotoSpace({
       <div className="photo-aperture">
         {photo ? (
           <Image
-            src={photo.src}
+            src={assetPath(photo.src)}
             alt={photo.alt}
             fill
             sizes={

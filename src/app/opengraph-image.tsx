@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/config/site";
+export const dynamic = "force-static";
 export const alt = `${site.name} — ${site.conceptual ? "projeto conceitual da dev_norm, sem atendimento jurídico ativo" : "apresentação profissional"}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

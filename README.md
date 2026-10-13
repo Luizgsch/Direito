@@ -18,7 +18,13 @@ npm run build
 npm start
 ```
 
-## Verificar
+## Publicação no GitHub Pages
+
+Site: https://luizgsch.github.io/Direito/
+
+O workflow `.github/workflows/pages.yml` publica automaticamente cada push na branch `main`. Ele verifica lint, exporta o Next.js para `out/` e envia o resultado ao GitHub Pages. A publicação usa o prefixo `/Direito/`, inclusive nos recursos, nas imagens e nos metadados. O modo local continua usando o servidor Next.js; a exportação é ativada por `GITHUB_PAGES=true`. Os avisos de demonstração e a desativação da indexação permanecem ativos.
+
+## Verificações locais
 
 ```sh
 npm run lint

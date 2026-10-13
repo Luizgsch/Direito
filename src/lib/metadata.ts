@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
+import { assetPath, shareImagePath } from "./paths";
 
 export function pageMetadata(
   title: string,
@@ -10,12 +11,12 @@ export function pageMetadata(
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: assetPath(path) },
     openGraph: {
       title: label,
       description,
-      url: path,
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      url: assetPath(path),
+      images: [{ url: shareImagePath(), width: 1200, height: 630 }],
       locale: "pt_BR",
       type: "website",
     },
@@ -23,7 +24,7 @@ export function pageMetadata(
       card: "summary_large_image",
       title: label,
       description,
-      images: ["/opengraph-image"],
+      images: [shareImagePath()],
     },
   };
 }

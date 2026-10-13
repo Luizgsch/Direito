@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { practiceAreas, site } from "@/config/site";
 import { practiceTopics } from "@/config/topics";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   if (site.conceptual || !site.indexing) return [];
   const routes = [

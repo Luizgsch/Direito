@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T18:24:40.188295+00:00",
+  "title": "Design System: Miguel Avelar",
+  "extensions": {
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "purpose": "Curva comum das respostas de interação."
+      },
+      {
+        "name": "button-duration",
+        "value": "0.3s",
+        "purpose": "Fundo e borda da ação."
+      },
+      {
+        "name": "arrow-duration",
+        "value": "0.4s",
+        "purpose": "Seta e sinal do FAQ."
+      },
+      {
+        "name": "topic-rule-duration",
+        "value": "0.5s",
+        "purpose": "Linha inferior dos assuntos."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "wide-footer",
+        "value": "1800px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação retangular com seta.",
+      "html": "<button class=\"ds ds-button\">Preparar mensagem<svg width=\"26\" height=\"20\" viewBox=\"0 0 26 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M1 10h23M17 3l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:15px 22px;min-height:56px;background:var(--ink);border:1px solid var(--ink);color:var(--ivory);font:15px/1.5 var(--font-geist-sans),sans-serif;transition:background .3s var(--ease-out),border-color .3s var(--ease-out)}.ds-button:hover{background:#494136;border-color:#494136}.ds-button:disabled{opacity:.6;cursor:wait}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}"
+    },
+    {
+      "name": "Link secundário",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Ação textual sublinhada.",
+      "html": "<a class=\"ds ds-link\" href=\"#sobre\">Conhecer a apresentação<svg width=\"26\" height=\"20\" viewBox=\"0 0 26 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M1 10h23M17 3l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;gap:22px;min-height:44px;color:var(--ink);font:15px/1.7 var(--font-geist-sans),sans-serif;text-decoration:underline;text-decoration-color:var(--bronze);text-underline-offset:6px}.ds-link:hover{color:var(--bronze)}.ds-link svg{transition:transform .4s var(--ease-out)}.ds-link:hover svg,.ds-link:focus-visible svg{transform:translateX(5px)}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo editável de borda mineral.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Nome</label><input class=\"ds ds-input\" id=\"ds-name\" placeholder=\"Seu nome\">",
+      "css": ".ds-label{display:block;margin-bottom:9px;color:var(--ink);font:16px/1.7 var(--font-geist-sans),sans-serif}.ds-input{width:100%;min-height:56px;border:1px solid var(--control-rule);border-radius:0;background:transparent;color:var(--ink);padding:13px 15px;font:16px/1.7 var(--font-geist-sans),sans-serif;caret-color:var(--bronze)}.ds-input::placeholder{color:var(--muted);opacity:1}.ds-input[aria-invalid=\"true\"]{border-color:var(--error)}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Links com estado atual marcado por linha.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds\" href=\"/#atuacao\" aria-current=\"page\">Áreas de atuação</a><a class=\"ds\" href=\"/#sobre\">Sobre</a></nav>",
+      "css": ".ds-nav{display:flex;gap:22px;color:var(--ink);font:16px/1.7 var(--font-geist-sans),sans-serif}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;border-bottom:1px solid transparent}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"]{border-bottom-color:var(--bronze)}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}@media(max-width:1100px){.ds-nav{gap:18px;font-size:14px}}@media(max-width:760px){.ds-nav{flex-direction:column;gap:0;font-size:16px}.ds-nav a{min-height:54px;padding:16px 0;border-top:1px solid var(--rule)}}"
+    },
+    {
+      "name": "Assunto",
+      "kind": "custom",
+      "refersTo": "topic-row",
+      "description": "Linha editorial de navegação com resposta ao foco.",
+      "html": "<a class=\"ds ds-topic\" href=\"/areas/divorcio\"><span><strong>Divórcio</strong><span>Compreender decisões e possibilidades.</span></span><svg width=\"26\" height=\"20\" viewBox=\"0 0 26 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M1 10h23M17 3l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-topic{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none;font-family:var(--font-geist-sans),sans-serif}.ds-topic strong{display:block;font-size:21px;font-weight:450;line-height:1.5}.ds-topic>span>span{display:block;margin-top:6px;font-size:17px;line-height:1.65;color:var(--muted);max-width:44ch}.ds-topic svg{color:var(--bronze);transition:transform .4s var(--ease-out)}.ds-topic:after{content:\"\";position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--bronze);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out)}.ds-topic:hover:after,.ds-topic:focus-visible:after{transform:scaleX(1)}.ds-topic:hover strong{color:var(--bronze)}.ds-topic:hover svg,.ds-topic:focus-visible svg{transform:translateX(5px)}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}@media(max-width:760px){.ds-topic{padding:22px 0;gap:20px}.ds-topic strong{font-size:20px}}"
+    },
+    {
+      "name": "FAQ",
+      "kind": "custom",
+      "description": "Disclosure nativo com sinal discreto.",
+      "html": "<details class=\"ds-faq\"><summary class=\"ds\">O que levar a uma primeira conversa?<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h14M10 3v14\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg></summary><p>Organize perguntas e documentos relevantes ao assunto. Outros registros dependem da situação.</p></details>",
+      "css": ".ds-faq{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);color:var(--ink);font-family:var(--font-geist-sans),sans-serif}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px;padding:24px 0;list-style:none;font-size:19px;line-height:1.5;cursor:pointer}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--bronze)}.ds-faq svg{color:var(--bronze);transition:transform .4s var(--ease-out)}.ds-faq[open] svg{transform:rotate(45deg)}.ds-faq p{padding:0 60px 28px 0;max-width:76ch;color:var(--muted);font-size:17px;line-height:1.7}.ds:focus-visible{outline:2px solid var(--bronze);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds,.ds svg,.ds:after,.ds-faq svg{transition:none!important}}@media(max-width:760px){.ds-faq summary{min-height:80px;padding:22px 0;font-size:18px}.ds-faq p{padding-right:0}}"
+    },
+    {
+      "name": "Reserva de fotografia do hero",
+      "kind": "custom",
+      "refersTo": "photo-space",
+      "description": "Composição temporária em pedra; fotografias reais conservam abertura 4:5.",
+      "html": "<figure class=\"ds-portrait\"><div class=\"ds-aperture\"><div class=\"ds-placeholder\"><span aria-hidden=\"true\">MA</span><p>Família.<br>Patrimônio.<br><em>Escolhas.</em></p></div></div><figcaption>Fotografia real a inserir · 4:5</figcaption></figure>",
+      "css": ".ds-portrait{max-width:330px;margin:0 auto;color:var(--muted)}.ds-aperture{position:relative;width:100%;aspect-ratio:4/5;background:var(--stone);overflow:hidden}.ds-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:start;justify-content:space-between;padding:32px;gap:14px}.ds-placeholder>span{font:clamp(90px,9vw,140px)/1 var(--font-display),Georgia,serif;color:var(--bronze);letter-spacing:-.04em}.ds-placeholder>p{margin:0;font:34px/1.2 var(--font-display),Georgia,serif;color:var(--ink)}.ds-placeholder em{color:var(--bronze)}.ds-portrait figcaption{font:14px/1.6 var(--font-geist-sans),sans-serif;padding-top:14px}@media(max-width:760px){.ds-portrait{max-width:none}.ds-aperture{aspect-ratio:auto}.ds-placeholder{position:relative;min-height:160px;flex-direction:row;align-items:center;padding:24px}.ds-placeholder>span{font-size:90px}.ds-placeholder>p{font-size:27px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Monografia de arquitetura",
+    "overview": "A monografia de arquitetura orienta uma apresentação editorial sóbria: marfim mineral e preto quente alternam planos de leitura, enquanto títulos serifados dão presença ao conteúdo. Divisórias precisas e listas abertas organizam a informação sem uma sequência de cartões iguais.\n\nA identidade do profissional é conceitual e permanece explícita. A reserva tipográfica em pedra prepara o retrato real com legenda honesta. Fotografia e credenciais entram somente quando fornecidas. Sobre da home e contexto de artigos evitam repetir reservas ausentes.",
+    "keyCharacteristics": [
+      "Contraste entre planos claros e escuros.",
+      "Bodoni Moda nos títulos e Geist na leitura.",
+      "Listas abertas com divisórias e setas discretas.",
+      "Reserva tipográfica em pedra e fotografias reais com proporção definida."
+    ],
+    "rules": [
+      {
+        "name": "The Bronze Detail Rule",
+        "body": "Reserve bronze para orientação e detalhes; organize as grandes superfícies com marfim, pedra e preto quente.",
+        "section": "colors"
+      },
+      {
+        "name": "The Editorial Pair Rule",
+        "body": "Use a serifa para títulos e identidade; mantenha textos de leitura, tabelas, navegação e controles na sans-serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Plane Rule",
+        "body": "Preserve superfícies planas e divisórias; não use sombras para organizar o conteúdo.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve Bodoni Moda nos títulos e Geist na leitura e nos controles.",
+      "**Do** mantenha foco visível, semântica de tabela e disclosure nativo no FAQ.",
+      "**Do** preserve 4:5 nas fotografias reais e ajuste o enquadramento pela configuração; use a reserva compacta somente no hero mobile sem foto.",
+      "**Do** respeite movimento reduzido e a ordem de leitura móvel."
+    ],
+    "donts": [
+      "**Don't** recoloque verde como cor principal.",
+      "**Don't** transforme listas abertas em cartões genéricos repetidos.",
+      "**Don't** acrescente símbolos jurídicos clichês, brilho dourado ou provas profissionais fictícias.",
+      "**Don't** acrescente sombras ao vocabulário de planos e divisórias."
+    ]
+  }
+}

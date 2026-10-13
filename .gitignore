@@ -16,6 +16,13 @@
 # next.js
 /.next/
 /out/
+playwright-report/
+test-results/
+
+# local design previews and review artifacts
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/review/
 
 # production
 /build
@@ -32,6 +39,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel

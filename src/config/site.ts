@@ -22,7 +22,11 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
     "Projeto conceitual da dev_norm: uma apresentação informativa sobre Direito de Família e Sucessões. Miguel Avelar é fictício e não há atendimento jurídico ativo.",
-  photo: null as ProfessionalPhoto | null,
+  photo: {
+    src: "/fotos/miguel-avelar-ia.webp",
+    alt: "Retrato ilustrativo gerado por IA de Miguel Avelar, personagem fictício desta demonstração.",
+    position: "50% 35%",
+  } as ProfessionalPhoto | null,
   photos: {
     hero: null as ProfessionalPhoto | null,
     about: null as ProfessionalPhoto | null,

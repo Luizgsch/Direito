@@ -317,6 +317,9 @@ button:hover > .arrow {
   border: 0;
   overflow: hidden;
 }
+.has-photo .photo-aperture {
+  border: 1px solid #000;
+}
 .photo-placeholder {
   position: absolute;
   inset: 0;
@@ -494,7 +497,7 @@ button:hover > .arrow {
 .about-identity .about-identity-name { font-family: var(--font-display), Georgia, serif; color: var(--ink); line-height: 1.14; letter-spacing: -0.025em; font-size: clamp(50px, 4.5vw, 72px); max-width: 8ch; margin-bottom: 24px; }
 .about-identity p { max-width: 24ch; color: var(--muted); font-size: 18px; }
 .home-about-photo {
-  max-width: 360px;
+  max-width: 420px;
   width: 100%;
   margin-inline: auto;
 }
@@ -769,7 +772,7 @@ button:hover > .arrow {
   gap: 90px;
 }
 .about-photo {
-  max-width: 430px;
+  max-width: 480px;
 }
 .about-layout .prose h2 {
   font-size: 48px;
@@ -1418,7 +1421,7 @@ button:hover > .arrow {
   }
   .home-about-photo,
   .about-photo {
-    max-width: 330px;
+    max-width: 380px;
     margin-inline: auto;
     width: 100%;
   }
